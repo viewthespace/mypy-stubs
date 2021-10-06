@@ -22,3 +22,6 @@ class KafkaConsumer:
 
     def __next__(self) -> ConsumerRecord:
         pass
+
+    def bootstrap_connected(self) -> bool:
+        pass
