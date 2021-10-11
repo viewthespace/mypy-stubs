@@ -15,7 +15,7 @@ class KafkaConsumer:
             security_protocol: str = None,
             ssl_cafile: str = None,
             ssl_certfile: str = None,
-            ssl_check_hostname: str = None,
+            ssl_check_hostname: bool = None,
             ssl_context: ssl.SSLContext = None,
             ssl_keyfile: str = None,
             value_deserializer: Callable[[bytes], bytes] = None,
