@@ -11,8 +11,13 @@ class KafkaConsumer:
             bootstrap_servers: Union[List[str], str] = None,
             auto_offset_reset: str = None,
             consumer_timeout_ms: int = None,
+            group_id: str = None,
             security_protocol: str = None,
+            ssl_cafile: str = None,
+            ssl_certfile: str = None,
+            ssl_check_hostname: str = None,
             ssl_context: ssl.SSLContext = None,
+            ssl_keyfile: str = None,
             value_deserializer: Callable[[bytes], bytes] = None,
             ) -> None:
         pass
