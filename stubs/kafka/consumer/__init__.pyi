@@ -1,5 +1,5 @@
 import ssl
-from typing import Callable, List, Union
+from typing import Callable, List, Tuple, Union
 
 from .fetcher import ConsumerRecord
 
@@ -13,7 +13,7 @@ class KafkaConsumer:
             consumer_timeout_ms: int = None,
             group_id: str = None,
             security_protocol: str = None,
-            api_version: tuple = None,
+            api_version: Tuple[int, ...] = None,
             ssl_cafile: str = None,
             ssl_certfile: str = None,
             ssl_check_hostname: bool = None,
