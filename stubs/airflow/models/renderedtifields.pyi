@@ -1,7 +1,6 @@
 from airflow.configuration import conf as conf
 from airflow.models.base import Base as Base, ID_LEN as ID_LEN
 from airflow.serialization.helpers import serialize_template_field as serialize_template_field
-from airflow.settings import json as json
 from airflow.utils.db import provide_session as provide_session
 from airflow.utils.sqlalchemy import UtcDateTime as UtcDateTime
 from typing import Any

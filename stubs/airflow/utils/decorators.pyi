@@ -7,5 +7,3 @@ PY2: bool
 signature = inspect.signature
 
 def apply_defaults(func): ...
-
-apply_defaults: Any
