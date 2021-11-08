@@ -1,0 +1,19 @@
+from airflow import models as models
+from airflow.contrib.operators.gcp_natural_language_operator import CloudLanguageAnalyzeEntitiesOperator as CloudLanguageAnalyzeEntitiesOperator, CloudLanguageAnalyzeEntitySentimentOperator as CloudLanguageAnalyzeEntitySentimentOperator, CloudLanguageAnalyzeSentimentOperator as CloudLanguageAnalyzeSentimentOperator, CloudLanguageClassifyTextOperator as CloudLanguageClassifyTextOperator
+from airflow.operators.bash_operator import BashOperator as BashOperator
+from airflow.utils.dates import days_ago as days_ago
+from typing import Any
+
+TEXT: str
+document: Any
+GCS_CONTENT_URI: str
+document_gcs: Any
+default_args: Any
+analyze_entities: Any
+analyze_entities_result: Any
+analyze_entity_sentiment: Any
+analyze_entity_sentiment_result: Any
+analyze_sentiment: Any
+analyze_sentiment_result: Any
+analyze_classify_text: Any
+analyze_classify_text_result: Any

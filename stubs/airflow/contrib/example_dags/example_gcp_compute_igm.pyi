@@ -1,0 +1,20 @@
+from airflow import models as models
+from airflow.contrib.operators.gcp_compute_operator import GceInstanceGroupManagerUpdateTemplateOperator as GceInstanceGroupManagerUpdateTemplateOperator, GceInstanceTemplateCopyOperator as GceInstanceTemplateCopyOperator
+from airflow.utils.dates import days_ago as days_ago
+from typing import Any
+
+GCP_PROJECT_ID: Any
+GCE_ZONE: Any
+default_args: Any
+GCE_TEMPLATE_NAME: Any
+GCE_NEW_TEMPLATE_NAME: Any
+GCE_NEW_DESCRIPTION: Any
+GCE_INSTANCE_TEMPLATE_BODY_UPDATE: Any
+GCE_INSTANCE_GROUP_MANAGER_NAME: Any
+SOURCE_TEMPLATE_URL: Any
+DESTINATION_TEMPLATE_URL: Any
+UPDATE_POLICY: Any
+gce_instance_template_copy: Any
+gce_instance_template_copy2: Any
+gce_instance_group_manager_update_template: Any
+gce_instance_group_manager_update_template2: Any

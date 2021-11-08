@@ -1,0 +1,19 @@
+from airflow import AirflowException as AirflowException
+from airflow.contrib.hooks.gcp_speech_to_text_hook import GCPSpeechToTextHook as GCPSpeechToTextHook
+from airflow.contrib.hooks.gcp_translate_hook import CloudTranslateHook as CloudTranslateHook
+from airflow.models import BaseOperator as BaseOperator
+from airflow.utils.decorators import apply_defaults as apply_defaults
+from typing import Any
+
+class GcpTranslateSpeechOperator(BaseOperator):
+    template_fields: Any
+    audio: Any
+    config: Any
+    target_language: Any
+    format_: Any
+    source_language: Any
+    model: Any
+    project_id: Any
+    gcp_conn_id: Any
+    def __init__(self, audio, config, target_language, format_, source_language, model, project_id: Any | None = ..., gcp_conn_id: str = ..., *args, **kwargs) -> None: ...
+    def execute(self, context): ...

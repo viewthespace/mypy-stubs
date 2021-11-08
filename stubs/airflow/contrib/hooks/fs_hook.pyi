@@ -1,0 +1,9 @@
+from airflow.hooks.base_hook import BaseHook as BaseHook
+from typing import Any
+
+class FSHook(BaseHook):
+    basepath: Any
+    conn: Any
+    def __init__(self, conn_id: str = ...) -> None: ...
+    def get_conn(self) -> None: ...
+    def get_path(self): ...

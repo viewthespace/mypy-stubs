@@ -1,0 +1,3 @@
+from airflow.configuration import conf as conf
+
+class MultiprocessingStartMethodMixin: ...

@@ -1,0 +1,76 @@
+import json
+from airflow.configuration import AIRFLOW_HOME as AIRFLOW_HOME, WEBSERVER_CONFIG as WEBSERVER_CONFIG, conf as conf
+from airflow.logging_config import configure_logging as configure_logging
+from airflow.utils.module_loading import import_string as import_string
+from airflow.utils.sqlalchemy import setup_event_handlers as setup_event_handlers
+from typing import Any
+
+log: Any
+RBAC: Any
+TIMEZONE: Any
+tz: Any
+
+class DummyStatsLogger:
+    @classmethod
+    def incr(cls, stat, count: int = ..., rate: int = ...) -> None: ...
+    @classmethod
+    def decr(cls, stat, count: int = ..., rate: int = ...) -> None: ...
+    @classmethod
+    def gauge(cls, stat, value, rate: int = ..., delta: bool = ...) -> None: ...
+    @classmethod
+    def timing(cls, stat, dt) -> None: ...
+
+class AllowListValidator:
+    allow_list: Any
+    def __init__(self, allow_list: Any | None = ...) -> None: ...
+    def test(self, stat): ...
+
+class SafeStatsdLogger:
+    statsd: Any
+    allow_list_validator: Any
+    def __init__(self, statsd_client, allow_list_validator=...) -> None: ...
+    def incr(self, stat, count: int = ..., rate: int = ...): ...
+    def decr(self, stat, count: int = ..., rate: int = ...): ...
+    def gauge(self, stat, value, rate: int = ..., delta: bool = ...): ...
+    def timing(self, stat, dt): ...
+
+Stats: Any
+statsd: Any
+allow_list_validator: Any
+Stats = DummyStatsLogger
+HEADER: Any
+LOGGING_LEVEL: Any
+GUNICORN_WORKER_READY_PREFIX: str
+LOG_FORMAT: Any
+SIMPLE_LOG_FORMAT: Any
+SQL_ALCHEMY_CONN: Any
+DAGS_FOLDER: Any
+PLUGINS_FOLDER: Any
+LOGGING_CLASS_PATH: Any
+engine: Any
+Session: Any
+json = json
+STATE_COLORS: Any
+
+def policy(task) -> None: ...
+def task_instance_mutation_hook(task_instance) -> None: ...
+def pod_mutation_hook(pod) -> None: ...
+def configure_vars() -> None: ...
+def configure_orm(disable_connection_pool: bool = ...) -> None: ...
+def dispose_orm() -> None: ...
+def configure_adapters(): ...
+def validate_session(): ...
+def configure_action_logging() -> None: ...
+def prepare_syspath() -> None: ...
+def import_local_settings() -> None: ...
+def initialize() -> None: ...
+
+KILOBYTE: int
+MEGABYTE: Any
+WEB_COLORS: Any
+CONTEXT_MANAGER_DAG: Any
+STORE_SERIALIZED_DAGS: Any
+MIN_SERIALIZED_DAG_UPDATE_INTERVAL: Any
+MIN_SERIALIZED_DAG_FETCH_INTERVAL: Any
+STORE_DAG_CODE: Any
+DONOT_MODIFY_HANDLERS: Any

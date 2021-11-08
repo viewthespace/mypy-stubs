@@ -1,0 +1,9 @@
+from airflow.contrib.hooks.spark_jdbc_hook import SparkJDBCHook as SparkJDBCHook
+from airflow.contrib.operators.spark_submit_operator import SparkSubmitOperator as SparkSubmitOperator
+from airflow.utils.decorators import apply_defaults as apply_defaults
+from typing import Any
+
+class SparkJDBCOperator(SparkSubmitOperator):
+    def __init__(self, spark_app_name: str = ..., spark_conn_id: str = ..., spark_conf: Any | None = ..., spark_py_files: Any | None = ..., spark_files: Any | None = ..., spark_jars: Any | None = ..., num_executors: Any | None = ..., executor_cores: Any | None = ..., executor_memory: Any | None = ..., driver_memory: Any | None = ..., verbose: bool = ..., keytab: Any | None = ..., principal: Any | None = ..., cmd_type: str = ..., jdbc_table: Any | None = ..., jdbc_conn_id: str = ..., jdbc_driver: Any | None = ..., metastore_table: Any | None = ..., jdbc_truncate: bool = ..., save_mode: Any | None = ..., save_format: Any | None = ..., batch_size: Any | None = ..., fetch_size: Any | None = ..., num_partitions: Any | None = ..., partition_column: Any | None = ..., lower_bound: Any | None = ..., upper_bound: Any | None = ..., create_table_column_types: Any | None = ..., *args, **kwargs) -> None: ...
+    def execute(self, context) -> None: ...
+    def on_kill(self) -> None: ...

@@ -1,0 +1,1 @@
+from airflow.contrib.operators.gcp_transfer_operator import S3ToGoogleCloudStorageTransferOperator as S3ToGoogleCloudStorageTransferOperator

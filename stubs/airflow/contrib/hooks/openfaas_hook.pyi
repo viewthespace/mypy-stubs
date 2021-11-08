@@ -1,0 +1,19 @@
+from airflow import AirflowException as AirflowException
+from airflow.hooks.base_hook import BaseHook as BaseHook
+from typing import Any
+
+OK_STATUS_CODE: int
+
+class OpenFaasHook(BaseHook):
+    GET_FUNCTION: str
+    INVOKE_ASYNC_FUNCTION: str
+    DEPLOY_FUNCTION: str
+    UPDATE_FUNCTION: str
+    function_name: Any
+    conn_id: Any
+    def __init__(self, function_name: Any | None = ..., conn_id: str = ..., *args, **kwargs) -> None: ...
+    def get_conn(self): ...
+    def deploy_function(self, overwrite_function_if_exist, body) -> None: ...
+    def invoke_async_function(self, body) -> None: ...
+    def update_function(self, body) -> None: ...
+    def does_function_exist(self): ...

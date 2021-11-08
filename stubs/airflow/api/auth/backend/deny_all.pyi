@@ -1,0 +1,6 @@
+from typing import Any
+
+CLIENT_AUTH: Any
+
+def init_app(_) -> None: ...
+def requires_authentication(function): ...

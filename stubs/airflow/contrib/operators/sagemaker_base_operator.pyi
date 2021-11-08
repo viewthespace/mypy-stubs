@@ -1,0 +1,19 @@
+from airflow.contrib.hooks.sagemaker_hook import SageMakerHook as SageMakerHook
+from airflow.models import BaseOperator as BaseOperator
+from airflow.utils.decorators import apply_defaults as apply_defaults
+from typing import Any, Iterable
+
+class SageMakerBaseOperator(BaseOperator):
+    template_fields: Any
+    template_ext: Any
+    ui_color: str
+    integer_fields: Iterable[Iterable[str]]
+    aws_conn_id: Any
+    config: Any
+    hook: Any
+    def __init__(self, config, aws_conn_id: str = ..., *args, **kwargs) -> None: ...
+    def parse_integer(self, config, field) -> None: ...
+    def parse_config_integers(self) -> None: ...
+    def expand_role(self) -> None: ...
+    def preprocess_config(self) -> None: ...
+    def execute(self, context) -> None: ...

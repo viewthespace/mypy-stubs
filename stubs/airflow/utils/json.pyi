@@ -1,0 +1,6 @@
+import json
+
+def json_ser(obj): ...
+
+class AirflowJsonEncoder(json.JSONEncoder):
+    def default(self, obj): ...

@@ -1,0 +1,9 @@
+from airflow import AirflowException as AirflowException
+from airflow.hooks.http_hook import HttpHook as HttpHook
+from typing import Any
+
+class OpsgenieAlertHook(HttpHook):
+    def __init__(self, opsgenie_conn_id: str = ..., *args, **kwargs) -> None: ...
+    base_url: Any
+    def get_conn(self, headers: Any | None = ...): ...
+    def execute(self, payload=...): ...

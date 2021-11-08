@@ -1,0 +1,13 @@
+from airflow.operators.sql import SQLCheckOperator as SQLCheckOperator, SQLIntervalCheckOperator as SQLIntervalCheckOperator, SQLThresholdCheckOperator as SQLThresholdCheckOperator, SQLValueCheckOperator as SQLValueCheckOperator
+
+class CheckOperator(SQLCheckOperator):
+    def __init__(self, *args, **kwargs) -> None: ...
+
+class IntervalCheckOperator(SQLIntervalCheckOperator):
+    def __init__(self, *args, **kwargs) -> None: ...
+
+class ThresholdCheckOperator(SQLThresholdCheckOperator):
+    def __init__(self, *args, **kwargs) -> None: ...
+
+class ValueCheckOperator(SQLValueCheckOperator):
+    def __init__(self, *args, **kwargs) -> None: ...

@@ -1,0 +1,53 @@
+from airflow import models as models
+from airflow.contrib.operators.gcp_vision_operator import CloudVisionAddProductToProductSetOperator as CloudVisionAddProductToProductSetOperator, CloudVisionAnnotateImageOperator as CloudVisionAnnotateImageOperator, CloudVisionDetectDocumentTextOperator as CloudVisionDetectDocumentTextOperator, CloudVisionDetectImageLabelsOperator as CloudVisionDetectImageLabelsOperator, CloudVisionDetectImageSafeSearchOperator as CloudVisionDetectImageSafeSearchOperator, CloudVisionDetectTextOperator as CloudVisionDetectTextOperator, CloudVisionProductCreateOperator as CloudVisionProductCreateOperator, CloudVisionProductDeleteOperator as CloudVisionProductDeleteOperator, CloudVisionProductGetOperator as CloudVisionProductGetOperator, CloudVisionProductSetCreateOperator as CloudVisionProductSetCreateOperator, CloudVisionProductSetDeleteOperator as CloudVisionProductSetDeleteOperator, CloudVisionProductSetGetOperator as CloudVisionProductSetGetOperator, CloudVisionProductSetUpdateOperator as CloudVisionProductSetUpdateOperator, CloudVisionProductUpdateOperator as CloudVisionProductUpdateOperator, CloudVisionReferenceImageCreateOperator as CloudVisionReferenceImageCreateOperator, CloudVisionRemoveProductFromProductSetOperator as CloudVisionRemoveProductFromProductSetOperator
+from airflow.operators.bash_operator import BashOperator as BashOperator
+from airflow.utils.dates import days_ago as days_ago
+from typing import Any
+
+default_args: Any
+GCP_VISION_LOCATION: Any
+GCP_VISION_PRODUCT_SET_ID: Any
+GCP_VISION_PRODUCT_ID: Any
+GCP_VISION_REFERENCE_IMAGE_ID: Any
+GCP_VISION_REFERENCE_IMAGE_URL: Any
+GCP_VISION_ANNOTATE_IMAGE_URL: Any
+product_set: Any
+product: Any
+reference_image: Any
+annotate_image_request: Any
+DETECT_IMAGE: Any
+product_set_create: Any
+product_set_get: Any
+product_set_update: Any
+product_set_delete: Any
+product_create: Any
+product_get: Any
+product_update: Any
+product_delete: Any
+reference_image_create: Any
+add_product_to_product_set: Any
+remove_product_from_product_set: Any
+product_set_create_2: Any
+product_set_create_2_idempotence: Any
+product_set_get_2: Any
+product_set_update_2: Any
+product_set_delete_2: Any
+product_create_2: Any
+product_create_2_idempotence: Any
+product_get_2: Any
+product_update_2: Any
+product_delete_2: Any
+reference_image_create_2: Any
+reference_image_create_2_idempotence: Any
+add_product_to_product_set_2: Any
+remove_product_from_product_set_2: Any
+annotate_image: Any
+annotate_image_result: Any
+detect_text: Any
+detect_text_result: Any
+document_detect_text: Any
+document_detect_text_result: Any
+detect_labels: Any
+detect_labels_result: Any
+detect_safe_search: Any
+detect_safe_search_result: Any

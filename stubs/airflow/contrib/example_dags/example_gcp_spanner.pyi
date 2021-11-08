@@ -1,0 +1,26 @@
+from airflow import models as models
+from airflow.contrib.operators.gcp_spanner_operator import CloudSpannerInstanceDatabaseDeleteOperator as CloudSpannerInstanceDatabaseDeleteOperator, CloudSpannerInstanceDatabaseDeployOperator as CloudSpannerInstanceDatabaseDeployOperator, CloudSpannerInstanceDatabaseQueryOperator as CloudSpannerInstanceDatabaseQueryOperator, CloudSpannerInstanceDatabaseUpdateOperator as CloudSpannerInstanceDatabaseUpdateOperator, CloudSpannerInstanceDeleteOperator as CloudSpannerInstanceDeleteOperator, CloudSpannerInstanceDeployOperator as CloudSpannerInstanceDeployOperator
+from airflow.utils.dates import days_ago as days_ago
+from typing import Any
+
+GCP_PROJECT_ID: Any
+GCP_SPANNER_INSTANCE_ID: Any
+GCP_SPANNER_DATABASE_ID: Any
+GCP_SPANNER_CONFIG_NAME: Any
+GCP_SPANNER_NODE_COUNT: Any
+GCP_SPANNER_DISPLAY_NAME: Any
+OPERATION_ID: str
+default_args: Any
+spanner_instance_create_task: Any
+spanner_instance_update_task: Any
+spanner_database_deploy_task: Any
+spanner_database_deploy_task2: Any
+spanner_database_update_task: Any
+spanner_database_update_idempotent1_task: Any
+spanner_database_update_idempotent2_task: Any
+spanner_instance_query_task: Any
+spanner_instance_query_task2: Any
+spanner_database_delete_task: Any
+spanner_database_delete_task2: Any
+spanner_instance_delete_task: Any
+spanner_instance_delete_task2: Any

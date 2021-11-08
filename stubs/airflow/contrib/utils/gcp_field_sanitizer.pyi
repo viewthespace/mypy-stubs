@@ -1,0 +1,9 @@
+from airflow import AirflowException as AirflowException, LoggingMixin as LoggingMixin
+from typing import List
+
+class GcpFieldSanitizerException(AirflowException):
+    def __init__(self, message) -> None: ...
+
+class GcpBodyFieldSanitizer(LoggingMixin):
+    def __init__(self, sanitize_specs: List[str]) -> None: ...
+    def sanitize(self, body) -> None: ...

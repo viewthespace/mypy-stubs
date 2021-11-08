@@ -1,0 +1,13 @@
+from airflow.task.task_runner.base_task_runner import BaseTaskRunner as BaseTaskRunner
+from airflow.utils.helpers import reap_process_group as reap_process_group
+from typing import Any
+
+CAN_FORK: Any
+
+class StandardTaskRunner(BaseTaskRunner):
+    dag: Any
+    def __init__(self, local_task_job) -> None: ...
+    process: Any
+    def start(self) -> None: ...
+    def return_code(self, timeout: int = ...): ...
+    def terminate(self) -> None: ...

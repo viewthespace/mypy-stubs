@@ -1,0 +1,16 @@
+from airflow.secrets import BaseSecretsBackend as BaseSecretsBackend
+from airflow.utils.log.logging_mixin import LoggingMixin as LoggingMixin
+from typing import Any, Optional
+
+class SecretsManagerBackend(BaseSecretsBackend, LoggingMixin):
+    connections_prefix: Any
+    variables_prefix: Any
+    config_prefix: Any
+    profile_name: Any
+    sep: Any
+    kwargs: Any
+    def __init__(self, connections_prefix: str = ..., variables_prefix: str = ..., config_prefix: str = ..., profile_name: Optional[str] = ..., sep: str = ..., **kwargs) -> None: ...
+    def client(self): ...
+    def get_conn_uri(self, conn_id: str) -> Optional[str]: ...
+    def get_variable(self, key: str) -> Optional[str]: ...
+    def get_config(self, key: str) -> Optional[str]: ...
