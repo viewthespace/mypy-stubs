@@ -12,6 +12,12 @@ Simply add this package as a dependency.
 
 ## Special considerations
 
+Some types have additional constructs added to them that are instead part of the `typing_vts` package.
+
+### Airflow
+
+- `typing_vts.Context` is an Airflow Context
+
 ### Shapely
 
 To avoid errors, the Shapely types use [NewType](https://mypy.readthedocs.io/en/stable/more_types.html#newtypes) for `X`, `Y`, and `Z` parameters. However, these don’t actually exist in Shapely. Instead, import them like:

@@ -14,3 +14,4 @@ packages = [
 
 [tool.poetry.dependencies]
 types-backports = "^0.1.3"
+typing-extensions = "^3.10.0"
