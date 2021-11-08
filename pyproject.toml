@@ -1,0 +1,16 @@
+[build-system]
+requires = ["poetry_core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "typeshed_vts"
+version = "2021.11.08"
+description = ""
+authors = []
+
+packages = [
+  { include = "typing_vts", from = "src" },
+]
+
+[tool.poetry.dependencies]
+types-backports = "^0.1.3"

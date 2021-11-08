@@ -1,10 +1,6 @@
-from typing import NewType
-
 from shapely.geometry.base import BaseGeometry
 
-X = NewType('X', float)
-Y = NewType('Y', float)
-Z = NewType('Z', float)
+from typing_vts.shapely import X, Y, Z
 
 
 class Point(BaseGeometry):
