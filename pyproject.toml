@@ -10,6 +10,15 @@ authors = []
 
 packages = [
   { include = "typing_vts", from = "src" },
+
+  { include = "airflow-stubs", from = "src" },
+  { include = "avro-stubs", from = "src" },
+  { include = "bugsnag-stubs", from = "src" },
+  { include = "geoalchemy2-stubs", from = "src" },
+  { include = "jsonschema-stubs", from = "src" },
+  { include = "kafka-stubs", from = "src" },
+  { include = "regex-stubs", from = "src" },
+  { include = "shapely-stubs", from = "src" },
 ]
 
 [tool.poetry.dependencies]

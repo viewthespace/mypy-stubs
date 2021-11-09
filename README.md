@@ -9,6 +9,7 @@ Simply add this package as a dependency.
 ## Development guidelines
 
 - Be sure to bump the version, otherwise dependents may not actually re-install
+- Be sure to add new stub packages (dirs in `./src`) to the `packages` list in `pyproject.toml`
 
 ## Special considerations
 
