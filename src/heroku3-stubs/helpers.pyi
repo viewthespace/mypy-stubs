@@ -1,0 +1,6 @@
+from typing import Any
+
+basestring: Any
+
+def is_collection(obj): ...
+def to_python(obj, in_dict, strs: Any | None = ..., dates: Any | None = ..., ints: Any | None = ..., objects: Any | None = ..., arrays: Any | None = ..., bools: Any | None = ..., dicts: Any | None = ..., **kwargs): ...

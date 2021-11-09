@@ -1,0 +1,3 @@
+from . import BaseResource as BaseResource, BuildPack as BuildPack
+
+class BuildpackInstallation(BaseResource): ...
