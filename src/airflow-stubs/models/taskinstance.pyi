@@ -21,6 +21,7 @@ from airflow.utils.net import get_hostname as get_hostname
 from airflow.utils.sqlalchemy import UtcDateTime as UtcDateTime
 from airflow.utils.state import State as State
 from airflow.utils.timeout import timeout as timeout
+import datetime as dt
 from sqlalchemy.orm.session import Session as Session
 from typing import Any, Optional
 
@@ -28,24 +29,24 @@ def clear_task_instances(tis, session, activate_dag_runs: bool = ..., dag: Any |
 
 class TaskInstance(Base, LoggingMixin):
     __tablename__: str
-    task_id: Any
-    dag_id: Any
-    execution_date: Any
-    start_date: Any
-    end_date: Any
-    duration: Any
-    state: Any
-    max_tries: Any
-    hostname: Any
-    unixname: Any
-    job_id: Any
-    pool: Any
-    pool_slots: Any
-    queue: Any
-    priority_weight: Any
-    operator: Any
-    queued_dttm: Any
-    pid: Any
+    task_id: str
+    dag_id: str
+    execution_date: dt.datetime
+    start_date: dt.datetime
+    end_date: dt.datetime
+    duration: float
+    state: str
+    max_tries: int
+    hostname: str
+    unixname: str
+    job_id: int
+    pool: str
+    pool_slots: int
+    queue: str
+    priority_weight: int
+    operator: str
+    queued_dttm: dt.datetime
+    pid: int
     executor_config: Any
     __table_args__: Any
     task: Any
