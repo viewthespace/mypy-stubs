@@ -1,4 +1,4 @@
-from logging import StreamHandler
+from logging import Logger, StreamHandler
 from typing import Any
 
 ANSI_ESCAPE: Any
@@ -8,9 +8,9 @@ def remove_escape_codes(text): ...
 class LoggingMixin:
     def __init__(self, context: Any | None = ...) -> None: ...
     @property
-    def logger(self): ...
+    def logger(self): Logger
     @property
-    def log(self): ...
+    def log(self): Logger
 
 class StreamLogWriter:
     encoding: Any
