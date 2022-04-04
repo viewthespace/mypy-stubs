@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "typeshed_vts"
-version = "2022.03.21"
+version = "2022.04.04"
 description = ""
 authors = []
 
