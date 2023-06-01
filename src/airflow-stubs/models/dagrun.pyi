@@ -16,7 +16,7 @@ class DagRun(Base, LoggingMixin):
     ID_FORMAT_PREFIX: Any
     id: Any
     dag_id: Any
-    execution_date: Any
+    execution_date: dt.datetime
     start_date: Any
     end_date: Any
     run_id: Any
